@@ -9,13 +9,13 @@ import java.net.InetAddress;
 public class UdpClient {
     public static void main(String[] args) {
         try {
-            final int PORT = 8000;
+            final int PORT = 6000;
 
             // 建立一個DataramSocket物件
             DatagramSocket ds = new DatagramSocket();
 
             // 取得接收端的電腦位址
-            InetAddress address = InetAddress.getByName("10.2.8.162");
+            InetAddress address = InetAddress.getByName("10.2.8.50");
 
             // 要求使用者輸入字串
             String str;
@@ -40,6 +40,7 @@ public class UdpClient {
 
             System.out.println("結束！");
 
+            // 關閉Socket
             ds.close();
         }
         catch (Exception e) {
@@ -48,3 +49,4 @@ public class UdpClient {
 
     }
 }
+
